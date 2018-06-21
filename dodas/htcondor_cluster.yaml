@@ -85,6 +85,8 @@ topology_template:
         marathon_password: { get_input: marathon_password }        
       requirements:
         - host: mesos-lb-server
+        - dependency: mesos_master
+
 
     htcondor_services:
       type: tosca.nodes.indigo.HTCondorServices

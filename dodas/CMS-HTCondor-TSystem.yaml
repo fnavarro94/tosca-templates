@@ -152,6 +152,7 @@ topology_template:
         marathon_password: { get_input: marathon_password }
       requirements:
         - host: mesos-lb-server
+        - dependency: mesos_master
 
     mesos-master-server:
       type: tosca.nodes.indigo.Compute
